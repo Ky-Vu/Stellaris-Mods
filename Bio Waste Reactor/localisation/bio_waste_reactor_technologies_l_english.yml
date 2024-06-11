@@ -1,0 +1,17 @@
+﻿l_english:
+
+##################################################################################################################################################################################################################
+### TECHNOLOGIES ###
+####################
+
+tech_bio_waste_reactor:0 "Bio-Waste Reactor"
+tech_bio_waste_reactor_desc:0 "A facility where excess organic matter is converted into energy at an inefficient rate."
+
+tech_bio_waste_reactor_2:0 "Advanced Bio-Waste Reactor"
+tech_bio_waste_reactor_2_desc:0 "An advanced facility where excess organic matter is converted into energy at an inefficient rate."
+
+tech_fe_bio_waste_1:0 "Organo-Conversion Hub"
+tech_fe_bio_waste_1_desc:0 "Even dead things can turn into usable energy."
+
+tech_fe_bio_waste_2:0 "Organo-Conversion Center"
+tech_fe_bio_waste_2_desc:0 "It doesn't matter if the organic becomes inorganic. All matter is made up of energy anyways."

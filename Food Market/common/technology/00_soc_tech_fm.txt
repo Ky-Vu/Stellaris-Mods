@@ -1,0 +1,149 @@
+# ##################
+# Trading
+# ##################
+tech_fish_market = {
+	cost = @tier1cost1
+	area = society
+	tier = 1
+	category = { statecraft }
+	prerequisites = { "tech_industrial_farming" }
+	weight = @tier1weight1
+	is_rare = yes
+
+	potential = {
+		OR = {
+			has_civic = civic_anglers
+			has_civic = civic_corporate_anglers
+			has_civic = civic_machine_anglers
+			has_civic = civic_corporate_machine_anglers
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.1
+		modifier = {
+			factor = 20
+			OR = {
+				has_civic = civic_anglers
+				has_civic = civic_corporate_anglers
+				has_civic = civic_machine_anglers
+				has_civic = civic_corporate_machine_anglers
+			}
+		}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_fish_market
+		}
+	}
+
+	ai_weight = {
+
+	}
+}
+
+tech_food_market = {
+	cost = @tier2cost1
+	area = society
+	tier = 2
+	category = { statecraft }
+	prerequisites = { "tech_fish_market" }
+	weight = @tier2weight1
+	is_rare = yes
+
+	weight_modifier = {
+		factor = 0.1
+		modifier = {
+			factor = 20
+			OR = {
+				has_civic = civic_anglers
+				has_civic = civic_corporate_anglers
+				has_civic = civic_machine_anglers
+				has_civic = civic_corporate_machine_anglers
+			}
+		}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_food_market
+		}
+	}
+
+	ai_weight = {
+
+	}
+}
+# ##################
+# Bio Reactor
+# ##################
+tech_bio_reactor = {
+	cost = @tier1cost1
+	area = society
+	tier = 1
+	category = { biology }
+	prerequisites = { "tech_industrial_farming" }
+	weight = @tier1weight1
+	is_rare = yes
+
+	weight_modifier = {
+		factor = 0.1
+		modifier = {
+			factor = 20
+			OR = {
+				is_catalytic_empire = yes
+				is_machine_empire = yes
+				is_mechanical_empire = yes
+				is_lithoid_empire = yes
+			}
+			NOR = {
+				has_civic = civic_anglers
+				has_civic = civic_corporate_anglers
+				has_civic = civic_machine_anglers
+				has_civic = civic_corporate_machine_anglers
+			}
+		}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_bio_reactor
+		}
+	}
+
+	ai_weight = {
+
+	}
+}
+
+tech_bio_reactor_2 = {
+	cost = @tier2cost1
+	area = society
+	tier = 2
+	category = { biology }
+	prerequisites = { "tech_bio_reactor" }
+	weight = @tier2weight1
+	is_rare = yes
+
+	weight_modifier = {
+		factor = 0.1
+		modifier = {
+			factor = 20
+			OR = {
+				is_catalytic_empire = yes
+				is_machine_empire = yes
+				is_mechanical_empire = yes
+				is_lithoid_empire = yes
+			}
+			NOR = {
+				has_civic = civic_anglers
+				has_civic = civic_corporate_anglers
+				has_civic = civic_machine_anglers
+				has_civic = civic_corporate_machine_anglers
+			}
+		}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_bio_reactor_2
+		}
+	}
+
+	ai_weight = {
+
+	}
+}

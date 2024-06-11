@@ -1,0 +1,9 @@
+worker_growth = {
+	base = 1
+	complex_trigger_modifier = {
+		trigger_scope = planet
+		trigger = num_assigned_jobs
+		parameters = { job = $JOB$ }
+		mode = add
+	}
+}

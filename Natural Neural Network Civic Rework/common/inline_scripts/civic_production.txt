@@ -1,0 +1,12 @@
+produces = {
+	trigger = {
+		owner = {
+			is_hive_empire = yes
+			has_civic = civic_hive_natural_neural_network
+		}
+	}
+	physics_research = 0.005
+	engineering_research = 0.005
+	society_research = 0.005
+	mult = owner.value:hive_brain_growth
+}

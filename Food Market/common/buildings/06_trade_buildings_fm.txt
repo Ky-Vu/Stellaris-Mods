@@ -1,0 +1,124 @@
+building_fish_market = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+
+	category = resource
+
+	potential = {
+		exists = owner
+		NOR = {
+			is_planet_class = pc_machine
+			has_modifier = resort_colony
+		}
+
+		OR = {
+			owner = {
+				is_ai = no
+			}
+			has_civic = civic_anglers
+			has_civic = civic_corporate_anglers
+			has_civic = civic_machine_anglers
+			has_civic = civic_corporate_machine_anglers
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			NOR = {
+				has_civic = civic_anglers
+				has_civic = civic_corporate_anglers
+				has_civic = civic_machine_anglers
+				has_civic = civic_corporate_machine_anglers
+			}
+		}
+	}
+	
+	convert_to = {
+		building_bio_reactor
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			food = @b1_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_farmers_food_produces_add = -2
+	}
+
+	upgrades = {
+		building_food_market
+	}
+
+	prerequisites = {
+		"tech_fish_market"
+	}
+}
+
+building_food_market = {
+	base_buildtime = @b2_time
+	can_build = no
+	category = resource
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	potential = {
+		exists = owner
+		NOR = {
+			is_planet_class = pc_machine
+			has_modifier = resort_colony
+		}
+
+		OR = {
+			owner = {
+				is_ai = no
+			}
+			has_civic = civic_anglers
+			has_civic = civic_corporate_anglers
+			has_civic = civic_machine_anglers
+			has_civic = civic_corporate_machine_anglers
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			NOR = {
+				has_civic = civic_anglers
+				has_civic = civic_corporate_anglers
+				has_civic = civic_machine_anglers
+				has_civic = civic_corporate_machine_anglers
+			}
+		}
+	}
+	
+	convert_to = {
+		building_bio_reactor_2
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			food = @b2_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_anglers_food_produces_add = -3
+	}
+
+	prerequisites = {
+		"tech_food_market"
+	}
+}

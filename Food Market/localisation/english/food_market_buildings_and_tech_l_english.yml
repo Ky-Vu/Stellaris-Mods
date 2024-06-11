@@ -1,0 +1,14 @@
+﻿l_english:
+
+####################################
+# Buildings and Tech
+####################################
+
+building_fish_market:0 "Fish Market"
+building_fish_market_desc:0 "A central trade hub where our fishermen can sell their catches here for more profit."
+tech_fish_market:0 "$building_fish_market$"
+tech_fish_market_desc:0 "$building_fish_market_desc$"
+building_food_market:0 "Food Market"
+building_food_market_desc:0 "An expanded trade hub where anyone can buy and sell all sorts of groceries."
+tech_food_market:0 "$building_food_market$"
+tech_food_market_desc:0 "$building_food_market_desc$"

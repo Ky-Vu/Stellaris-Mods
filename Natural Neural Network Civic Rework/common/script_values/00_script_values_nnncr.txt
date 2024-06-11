@@ -1,0 +1,9 @@
+hive_brain_growth = {
+	base = 1
+	complex_trigger_modifier = {
+		trigger_scope = owner
+		trigger = num_assigned_jobs
+		parameters = { job = brain_drone }
+		mode = add
+	}
+}

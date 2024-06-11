@@ -1,0 +1,403 @@
+###################
+# Gestalt Jobs
+###################
+mining_drone = {
+	category = simple_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = building_mineral_purification_plant
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	triggered_planet_modifier = {
+		potential = {
+			planet = { has_building = building_mineral_purification_plant }
+		}
+		modifier = {
+			planet_miners_minerals_produces_mult = 0.01
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			planet = { has_building = building_mineral_purification_hub }
+		}
+		modifier = {
+			planet_miners_minerals_produces_mult = 0.02
+		}
+	}
+
+	resources = {
+		category = planet_miners
+		produces = {
+			minerals = 4
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_material_requisitorium
+				}
+			}
+			minerals = @requisitorium_minerals_reduction
+		}
+	}
+
+	overlord_resources = {
+		category = planet_requisitioned_minerals
+		produces = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_material_requisitorium
+				}
+			}
+			minerals = @requisitorium_minerals_overlord
+		}
+	}
+
+	weight = {
+		weight = @simple_drone_job_weight
+		mult = value:job_weights_modifier|JOB|mining_drone|RESOURCE|minerals|
+		modifier = {
+			factor = 1.1
+			exists = owner
+			years_passed < 1
+			owner = { has_valid_civic = civic_machine_assimilator }
+			has_trait = trait_cybernetic
+		}
+		modifier = {
+			factor = 1.2
+			has_job = mining_drone
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { has_job = mining_drone }
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value > 85
+				}
+			}
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_minerals"
+}
+
+agri_drone = {
+	category = simple_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = building_food_processing_facility
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+	
+	triggered_planet_modifier = {
+		potential = {
+			planet = { has_building = building_food_processing_facility }
+		}
+		planet_farmers_food_produces_mult = 0.01
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			planet = { has_building = building_food_processing_center }
+		}
+		planet_farmers_food_produces_mult = 0.02
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			planet = { has_building = building_bio_reactor }
+		}
+		planet_farmers_energy_produces_mult = 0.01
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			planet = { has_building = building_bio_reactor_2 }
+		}
+		planet_farmers_energy_produces_mult = 0.02
+	}
+
+	resources = {
+		category = planet_farmers
+		produces = {
+			food = 6
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_robot_empire = yes
+					is_catalytic_empire = no
+				}
+			}
+			food = -1
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_produce_requisitorium
+				}
+			}
+			food = @requisitorium_food_reduction
+		}
+	}
+
+	overlord_resources = {
+		category = planet_requisitioned_food
+		produces = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_produce_requisitorium
+				}
+			}
+			food = @requisitorium_food_overlord
+		}
+	}
+
+	weight = {
+		weight = @simple_drone_job_weight
+		mult = value:job_weights_modifier|JOB|agri_drone|RESOURCE|food|
+		modifier = {
+			factor = 0.9
+			NOT = { has_job = agri_drone }
+			owner = {
+				has_monthly_income = {
+					resource = food
+					value > 50
+				}
+			}
+		}
+		modifier = {
+			factor = 1.2
+			has_job = agri_drone
+		}
+		modifier = {
+			factor = 0.9
+			owner = {
+				is_robot_empire = yes
+			}
+		}
+		modifier = {
+			factor = 1.1
+			exists = owner
+			years_passed < 1
+			owner = { has_valid_civic = civic_machine_assimilator }
+			has_trait = trait_cybernetic
+		}
+
+		modifier = {
+			factor = 0.5
+			has_trait = trait_lithoid
+
+			owner = {
+				is_lithoid_empire = yes
+				country_uses_food = no
+				has_monthly_income = {
+					resource = food
+					value >= 0
+				}
+			}
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_food"
+}
+
+technician_drone = {
+	category = simple_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = building_energy_grid
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	triggered_planet_modifier = {
+		potential = {
+			planet = { has_building = building_energy_grid }
+		}
+		modifier = {
+			planet_technician_energy_produces_mult = 0.01
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			planet = { has_building = building_energy_nexus }
+		}
+		modifier = {
+			planet_technician_energy_produces_mult = 0.02
+		}
+	}
+
+	resources = {
+		category = planet_technician
+		produces = {
+			energy = 6
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_robot_empire = yes
+				}
+			}
+			energy = 2
+		}
+		produces = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_energy_requisitorium
+				}
+			}
+			energy = @requisitorium_energy_reduction
+		}
+	}
+
+	overlord_resources = {
+		category = planet_requisitioned_energy
+		produces = {
+			trigger = {
+				planet = {
+					has_planet_flag = has_energy_requisitorium
+				}
+			}
+			energy = @requisitorium_energy_overlord
+		}
+	}
+
+	weight = {
+		weight = @simple_drone_job_weight
+		mult = value:job_weights_modifier|JOB|technician_drone|RESOURCE|energy|
+		modifier = {
+			factor = 0.9
+			NOT = { has_job = technician_drone }
+			owner = {
+				has_monthly_income = {
+					resource = energy
+					value > 50
+				}
+			}
+		}
+		modifier = {
+			factor = 1.2
+			has_job = technician_drone
+		}
+		modifier = {
+			factor = 1.1
+			exists = owner
+			years_passed < 1
+			owner = { has_valid_civic = civic_machine_assimilator }
+			has_trait = trait_cybernetic
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_energy"
+}
+
+scrap_miner_drone = {
+	category = simple_drone
+	condition_string = DRONE_JOB_TRIGGER
+	building_icon = building_mineral_purification_plant
+	icon = miner
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	triggered_planet_modifier = {
+		potential = {
+			planet = { has_building = building_mineral_purification_plant }
+		}
+		modifier = {
+			planet_miners_minerals_produces_mult = 0.015
+			planet_miners_alloys_produces_mult = 0.015
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			planet = { has_building = building_mineral_purification_hub }
+			has_ringworld_output_boost = no
+		}
+		modifier = {
+			planet_miners_minerals_produces_mult = 0.03
+			planet_miners_alloys_produces_mult = 0.03
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			planet = { has_building = building_mineral_purification_hub }
+			has_ringworld_output_boost = yes
+		}
+		modifier = {
+			planet_miners_minerals_produces_mult = 0.03
+			planet_miners_alloys_produces_mult = 0.03
+		}
+	}
+
+	resources = {
+		category = planet_miners
+		produces = {
+			minerals = 2
+			alloys = 1
+		}
+	}
+
+	weight = {
+		weight = @simple_drone_job_weight
+		mult = value:job_weights_multiple_resources_modifier|JOB|scrap_miner_drone|RESOURCE1|minerals|WEIGHT1|0.7|RESOURCE2|alloys|WEIGHT2|0.3|
+		modifier = {
+			factor = 1.1
+			exists = owner
+			years_passed < 1
+			owner = { has_valid_civic = civic_machine_assimilator }
+			has_trait = trait_cybernetic
+		}
+		modifier = {
+			factor = 1.2
+			has_job = scrap_miner_drone
+		}
+		modifier = {
+			factor = 0.9
+			NOT = { has_job = scrap_miner_drone }
+			owner = {
+				has_monthly_income = {
+					resource = minerals
+					value > 85
+				}
+			}
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_minerals"
+}

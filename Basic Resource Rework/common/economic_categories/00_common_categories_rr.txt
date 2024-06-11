@@ -1,0 +1,25 @@
+planet_clerks = {
+	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+	}
+	
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = pop
+}
+
+planet_traders = {
+	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+	}
+	
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = pop
+}

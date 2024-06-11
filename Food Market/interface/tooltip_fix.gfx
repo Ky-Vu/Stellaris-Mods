@@ -1,0 +1,8 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_text_job_farmer_text"
+		textureFile = "gfx/interface/icons/jobs/job_farmer_text.dds"
+	}
+	
+}
