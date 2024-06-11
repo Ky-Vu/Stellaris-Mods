@@ -66,6 +66,7 @@ May or may not be compatible with my other works.
 # Civic Mods #
 ## Natural Neural Network Civic Rework ##
 ### Link ###
+https://steamcommunity.com/sharedfiles/filedetails/?id=3266010733
 ### Description ###
 Natural Neural Network always felt out of lore and lackluster, being only +1 to all research for unemployed pops. It doesn't really make sense to have only the drones not working be mini-computation chips. It'd be like having a CPU dedicate an entire single core to doing calculations rather than all of them process it.
 
@@ -82,6 +83,7 @@ E.g. for 60 brain drones, all drones provide +0.3. If you have 300 drones, that'
 # Trait Mods #
 ## Machine Durable Trait Change ##
 ### Link ###
+https://steamcommunity.com/sharedfiles/filedetails/?id=3266013571
 ### Description ###
 Made on a whim to keep consistency with the cyborg trait of the same name.
 
