@@ -61,8 +61,16 @@ May or may not be compatible with my other works.
   - Produces: 150 energy
 ## Food Market ##
 ### Link ###
+https://steamcommunity.com/sharedfiles/filedetails/?id=3266126155
 ### Description ###
+An alternative to the bio-reactor for angler empires which effectively converts food to trade instead. Angler empires cannot research the bio-reactor but can research the Fish/Food Market for increased trade value.
+
+This variant is meant to be a simple add-on to the base game. This was not made with my resource reworks in mind.
+
+May or may not be compatible with my other works.
 ### Detailed Changes ###
+* Fish Market
+  - Alternative to the Bio-Reactor which effectively converts 2 Food to 2 Trade
 # Civic Mods #
 ## Natural Neural Network Civic Rework ##
 ### Link ###
