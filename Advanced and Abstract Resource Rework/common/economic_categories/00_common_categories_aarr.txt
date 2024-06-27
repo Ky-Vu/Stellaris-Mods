@@ -1,0 +1,135 @@
+planet_managers = {
+	parent = planet_administrators
+	modifier_category = pop
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	# Inherited Modifiers
+	triggered_produces_modifier = {
+		key = planet_administrators
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+}
+
+planet_bio_trophies = {
+	parent = planet_culture_workers
+	modifier_category = pop
+	generate_mult_modifiers = {
+		produces
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+planet_unifiers = {
+	parent = planet_administrators
+	modifier_category = pop
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	# Inherited Modifiers
+	triggered_produces_modifier = {
+		key = planet_administrators
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+}
+
+planet_coordinators = {
+	parent = planet_administrators
+	modifier_category = pop
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	# Inherited Modifiers
+	triggered_produces_modifier = {
+		key = planet_administrators
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+}
+
+planet_synapse_drones = {
+	parent = planet_administrators
+	modifier_category = pop
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	# Inherited Modifiers
+	triggered_produces_modifier = {
+		key = planet_administrators
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+}
+
+planet_priests = {
+	parent = planet_administrators
+	modifier_category = pop
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	# Inherited Modifiers
+	triggered_produces_modifier = {
+		key = planet_administrators
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+}
