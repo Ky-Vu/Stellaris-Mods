@@ -2,6 +2,7 @@
 Collection of various mods I made
 
 # Resource Mods #
+* Note: B1/B2/B3 denotes each level of building - see https://stellaris.paradoxwikis.com/Unique_buildings to get a grasp on what I mean in the details below
 ## Basic Resource Rework ##
 ### Link ###
 https://steamcommunity.com/sharedfiles/filedetails/?id=3265433130
@@ -15,12 +16,12 @@ I may or may not continue updating this in the future. But this should essential
 May or may not be compatible with my other works. I haven't really tested but I will be making an all-in-one resource overhaul one day.
 ### Detailed Changes ###
 * Energy Grid/Nexus || Mineral Purification Plant/Hub || Food Processing Facility/Center
-  - Each Technician/Miner/Farmer increases output of other Technicians/Miners/Farmers by 1%/2%
+  - Each Technician/Miner/Farmer increases output of other Technicians/Miners/Farmers by 1%/2% for B1/B2
 
 * Energy Nexus || Mineral Purification Hub || Food Processing Center
   - Each respective building Strategic Resource (Exotic Gases/Rare Crystals/Volatile Motes) upkeep reduced to 1
   - Increases upkeep of each Technician/Miner/Farmer by 0.2 of respective strategic resource
-    - Miners and Purification Hub utilize Rare Crystals instead of Volatile Motes - this is to make gestalts rely on all 3 Strategic Resources more evenly for basic resources
+    - Miners and Purification Hub utilize Rare Crystals instead of Volatile Motes - this is to make gestalts rely on all 3 Strategic Resources more evenly
 
 * Galactic Stock Exchange
   - Provides only flat 5% trade multiplier for the planet, but each Clerk now provides 2.5% trade multiplier
@@ -30,7 +31,48 @@ May or may not be compatible with my other works. I haven't really tested but I 
   - Base Energy production for Anglers and Farmers now only increases by 1 ***but***
     - Each Angler and Farmer increases Energy production by 1%/2%
 ## Advanced and Abstract Resource Rework ##
-### To-Do ###
+Similar to the Basic Resource Rework mod, this mod is an attempt to change the instant gratification that the resource production enhancement buildings give and is also an attempt at making Strategic Resources (SR) feel more in-lore.
+
+I may or may not continue updating this in the future. But this should essentially work for previous versions as well (unless the structure of the game is different).
+
+May or may not be compatible with my other works. I haven't really tested but I will be making an all-in-one resource overhaul one day.
+### Link ###
+### Description ###
+### Detailed Changes ###
+* Research
+  - **Institute/Supercomputer**
+    - Empire limit removed - now Planet limit of 1
+    - +5% all research now reduced to +0.5% (this will show up as +0% in the modifiers but it is working - I don't know how to fix this)
+    - +0.5% all research produced for each researcher per researcher
+    - +0.5 Exotic Gases upkeep for each researcher
+  - **Faculty of Archaestudies**
+    - Empire limit removed - now Planet limit of 1
+    - If built on *non-*Relic world:
+      - +0.1 Minor Artifacts produced for Archaeoengineers on non-Relic worlds
+      - +3% Archaeostudies research (+13% with AP)
+      - +30 Max Minor Artifacts cap (+130 with AP)
+    - If built on Relic world:
+      - +0.3 Minor Artifacts produced for Archaeoengineers on Relic worlds (+0.35 with AP)
+      - **All** researchers +0.05 Minor Artifacts (this affects the above points so it's actually +0.35 yes...)
+      - +15% Archaeostudies research (+25% with AP)
+      - +150 Max Minor Artifacts cap (+250 with AP)
+    - AP effects
+      - **All** researchers +0.05 Minor Artifacts
+      - +10% Archaeostudies research
+      - +100 Max Minor Artifacts cap
+* Unity
+  - **Monuments**
+    - +0.15%/+0.3%/+0.5% unity per Bureacrat/Manager/Priest/Steward/Synapse drone/Coordinator/Bio-Trophy for B1/B2/B3
+    - +0.25/+0.5 rare crystals upkeep per Bureacrat/Manager/Priest/Steward/Synapse drone/Coordinator for B2/B3
+    - +0.05/+0.1 rare crystals upkeep per Bio-Trophy for B2/B3
+* Alloys/CGs
+  - Alloy Plant/Fabricator
+    - +0.5% (0.63% catalytic) alloy/CG per metallurgist/artisan respectively and doubles for each upgrade (+1/2 % with ringworld boost (e.g. +0.75% on base))
+    - +0.2 volatile motes on B2 and +0.4 volatile motes on B3 per metallurgist/artisan
+  - Ministry of Production/Resource Processing Center
+    - +1% (1.5% catalytic) alloy/CG per metallurgist/artisan respectively
+    - -0.5% minerals upkeep per metallurgist/artisan respectively
+    - 0.75% food upkeep per catalytic technician
 ## Strategic Resource Rework ##
 ### To-Do ###
 ## Bio Waste Reactor ##
