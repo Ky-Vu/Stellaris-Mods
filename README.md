@@ -31,13 +31,14 @@ May or may not be compatible with my other works. I haven't really tested but I 
   - Base Energy production for Anglers and Farmers now only increases by 1 ***but***
     - Each Angler and Farmer increases Energy production by 1%/2%
 ## Advanced and Abstract Resource Rework ##
+### Link ###
+https://steamcommunity.com/sharedfiles/filedetails/?id=3276200012
+### Description ###
 Similar to the Basic Resource Rework mod, this mod is an attempt to change the instant gratification that the resource production enhancement buildings give and is also an attempt at making Strategic Resources (SR) feel more in-lore.
 
 I may or may not continue updating this in the future. But this should essentially work for previous versions as well (unless the structure of the game is different).
 
 May or may not be compatible with my other works. I haven't really tested but I will be making an all-in-one resource overhaul one day.
-### Link ###
-### Description ###
 ### Detailed Changes ###
 * Research
   - **Institute/Supercomputer**
