@@ -42,8 +42,10 @@ May or may not be compatible with my other works. I haven't really tested but I 
 ### Detailed Changes ###
 * Research
   - **Institute/Supercomputer**
-    - Empire limit removed - now Planet limit of 1
+    - Empire limit increased to 10
+    - Planet limit of 1
     - +5% all research now reduced to +0.5% (this will show up as +0% in the modifiers but it is working - I don't know how to fix this)
+    - +1 Scientist Leader cap now reduced to +0.2
     - +0.5% all research produced for each researcher per researcher
     - +0.5 Exotic Gases upkeep for each researcher
   - **Faculty of Archaestudies**
@@ -53,18 +55,18 @@ May or may not be compatible with my other works. I haven't really tested but I 
       - +3% Archaeostudies research (+13% with AP)
       - +30 Max Minor Artifacts cap (+130 with AP)
     - If built on Relic world:
-      - +0.3 Minor Artifacts produced for Archaeoengineers on Relic worlds (+0.35 with AP)
+      - +0.3 Minor Artifacts produced for Archaeoengineers on Relic worlds
       - **All** researchers +0.05 Minor Artifacts (this affects the above points so it's actually +0.35 yes...)
-      - +15% Archaeostudies research (+25% with AP)
-      - +150 Max Minor Artifacts cap (+250 with AP)
+      - +15% Archaeostudies research
+      - +150 Max Minor Artifacts cap
     - AP effects
       - **All** researchers +0.05 Minor Artifacts
       - +10% Archaeostudies research
       - +100 Max Minor Artifacts cap
 * Unity
   - **Monuments**
-    - +0.15%/+0.3%/+0.5% unity per Bureacrat/Manager/Priest/Steward/Synapse drone/Coordinator/Bio-Trophy for B1/B2/B3
-    - +0.25/+0.5 rare crystals upkeep per Bureacrat/Manager/Priest/Steward/Synapse drone/Coordinator for B2/B3
+    - +0.15%/+0.3%/+0.5% unity per Bureacrat/Manager/Priest/Steward/Synapse Drone/Coordinator/Bio-Trophy for B1/B2/B3
+    - +0.25/+0.5 rare crystals upkeep per Bureacrat/Manager/Priest/Steward/Synapse Drone/Coordinator for B2/B3
     - +0.05/+0.1 rare crystals upkeep per Bio-Trophy for B2/B3
 * Alloys/CGs
   - Alloy Plant/Fabricator
@@ -73,9 +75,19 @@ May or may not be compatible with my other works. I haven't really tested but I 
   - Ministry of Production/Resource Processing Center
     - +1% (1.5% catalytic) alloy/CG per metallurgist/artisan respectively
     - -0.5% minerals upkeep per metallurgist/artisan respectively
-    - 0.75% food upkeep per catalytic technician
+    - -0.75% food upkeep per catalytic technician
+    - -0.1 volatile motes upkeep for each metallurgist/artisan/catalytic technician
 ## Strategic Resource Rework ##
-### To-Do ###
+### Detailed Changes ###
+* Strategic Resource Gatherers:
+  - Base output increased to 4
+* Ancient Refinery:
+  - +15% to all Strategic Resource Gatherers and Refiners reduced to only +10% to all Strategic Resource Gatherers
+  - Each respective Strategic Resource Refiner increases output of their respective SR by 2.5% and mineral upkeep by 1%
+  - Each respective Strategic Resource Gatherer increases the output of Refiners of their respective SR by 5% and mineral upkeep by 2%
+* Ascension Perk
+  - Increases Ancient Refinery bonus of +10% to +35%
+  - Increases base output of all Refiners by 1
 ## Bio Waste Reactor ##
 ### Link ###
 https://steamcommunity.com/sharedfiles/filedetails/?id=3252366076
